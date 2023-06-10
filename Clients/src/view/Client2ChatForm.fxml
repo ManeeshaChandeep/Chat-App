@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="view.Client2ChatForm"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane fx:id="ap_main" prefHeight="573.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Client01FormController">
+    <children>
+        <Button fx:id="btnSend" layoutX="660.0" layoutY="468.0" onAction="#btnSendOnAction" text="Send" />
+        <TextField fx:id="txtMsg" layoutX="139.0" layoutY="468.0" prefHeight="31.0" prefWidth="462.0" />
 
+        <ScrollPane fx:id="spMain" fitToWidth="true" layoutX="30" layoutY="70" prefHeight="388.0" prefWidth="684.0">
+
+            <content>
+                <VBox fx:id="msgBox" prefHeight="382.0" prefWidth="678.0" />
+            </content>
+
+        </ScrollPane>
+
+        <Label layoutX="114" layoutY="26">
+
+        </Label>
+        <Button fx:id="btnSend1" layoutX="30.0" layoutY="468.0" onAction="#btnSend1OnAction" text="Send" visible="false" />
+        <Button layoutX="30.0" layoutY="468.0" onAction="#btnSend2OnAction" text="Send" />
+
+        <Pane fx:id="loginPane" layoutX="1.0" layoutY="-1.0" prefHeight="573.0" prefWidth="741.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <Button layoutX="338.0" layoutY="441.0" mnemonicParsing="false" onAction="#btnLogin" text="Login" />
+                <TextField fx:id="txtUserName" layoutX="125.0" layoutY="196.0" prefHeight="31.0" prefWidth="512.0" promptText="UserName" />
+            </children>
+        </Pane>
+
+    </children>
 </AnchorPane>
